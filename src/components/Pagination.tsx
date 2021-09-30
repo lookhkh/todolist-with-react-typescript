@@ -24,7 +24,7 @@ export default function Pagination({currentPage,wholeTodo,limit,onClick}:proptyp
     
     return(
         <div>
-            {lists.map(a=><Btn onClick={()=>onClick(a)} className={a===currentPage?'active':''} href="#">{a}</Btn>)}
+            {lists.map(a=><Btn key={a} onClick={()=>onClick(a)} className={a===currentPage?'active':''} href="#">{a}</Btn>)}
         </div>
     )
 }

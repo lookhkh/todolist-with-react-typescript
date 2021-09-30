@@ -7,5 +7,6 @@ export type Todo = {
 export type State = {
     nextId: number,
     todos : Todo[]
+    filteredTodo : Todo[]
 }
 

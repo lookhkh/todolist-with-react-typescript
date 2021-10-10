@@ -5,6 +5,7 @@ import MainPage from './pages/MainPage';
 import { Switch, Route,Link} from 'react-router-dom'
 import InsertPage from './pages/InsertPage';
 import styled from 'styled-components';
+import Imgs from './pages/Imgs'
 
 const CONST = {
   MAIN:'main',
@@ -27,6 +28,9 @@ function App() {
           <Route path="/insert">
             <InsertPage />
           </Route>
+          <Route path="/imgs">
+            <Imgs/>
+            </Route>
         </Switch>
 
         {mode===CONST.MAIN && 

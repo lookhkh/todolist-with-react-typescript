@@ -6,7 +6,8 @@ import { Switch, Route,Link} from 'react-router-dom'
 import InsertPage from './pages/InsertPage';
 import styled from 'styled-components';
 import Imgs from './pages/Imgs'
-
+import GlobalStyle from './global';
+import PlayGround from './pages/PlayGround';
 const CONST = {
   MAIN:'main',
  INSERT:'insert'
@@ -19,7 +20,9 @@ function App() {
   
   
   return (
-    <div style={{width:'100vw',height:'100vh',backgroundColor:'gray',}} className="App">
+    <>
+    <GlobalStyle/>
+    <div style={{width:'100vw',height:'100vh'}} className="App">
       <Container>
         <Switch>
           <Route exact path="/">
@@ -31,6 +34,10 @@ function App() {
           <Route path="/imgs">
             <Imgs/>
             </Route>
+          <Route path="/playground">
+            <PlayGround />
+          </Route>
+
         </Switch>
 
         {mode===CONST.MAIN && 
@@ -45,7 +52,7 @@ function App() {
 
       </Container>
     </div>
-
+  </>
 )}
 
 export default App;
